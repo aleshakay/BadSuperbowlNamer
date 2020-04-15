@@ -66,5 +66,17 @@ namespace BadSuperbowlNamer.Tests
             //Assert
             Assert.Equal(expectedResult, actualResult);
         }
+        [Fact]
+        public void translatting_29_results_in_XXIX()
+        {
+            //Arrange
+            var number = 29;
+            var expectedResult = "XXIX";
+            var translator = new Translator();
+            //Act
+            var actualResult = translator.Translate(number);
+            //Assert
+            Assert.Equal(expectedResult, actualResult);
+        }
     }
 }
