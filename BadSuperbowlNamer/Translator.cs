@@ -11,7 +11,12 @@ namespace BadSuperbowlNamer
             var romanNumeral = "";
             while (number > 0)
             {
-                if (number >= 10)
+                if (number >= 40)
+                {
+                    romanNumeral += "XL";
+                    number -= 40;
+                }
+                else if (number >= 10)
                 {
                     romanNumeral += "X";
                     number -= 10;
